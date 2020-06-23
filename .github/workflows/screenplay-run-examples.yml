@@ -48,7 +48,7 @@ jobs:
 
       - run: npm install
       - name: Run tests with Screenplay
-        run: xvfb-run --auto-servernum npm test
+        run: xvfb-run --auto-servernum npm test || true
 
       - name: Cleanup xvfb pidx
         uses: bcomnes/cleanup-xvfb@v1
