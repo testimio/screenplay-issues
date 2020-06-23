@@ -1,4 +1,3 @@
-// const assert = require('chai').expect;
 const puppeteer = require('puppeteer');
 const { attach, updateHistoryFromScreenplayResultsOnly } = require('@testim/screenplay');
 describe("screenplay mocha example", () => {

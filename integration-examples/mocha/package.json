@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha *.test.*"
   },
   "keywords": [],
   "devDependencies": {
-    "@testim/screenplay": "^0.9.2",
+    "@testim/screenplay": "^0.9.3",
     "mocha": "^8.0.1",
     "puppeteer": "^4.0.0"
   }

@@ -4,11 +4,12 @@
   "description": "Screenplay integration example",
   "scripts": {
     "run-example": "node example.js",
-    "run-example-typescript": "ts-node example-ts.ts"
+    "run-example-typescript": "ts-node example-ts.ts",
+    "test": "npm run run-example && npm run run-example-typescript"
   },
   "private": true,
   "devDependencies": {
-    "@testim/screenplay": "^0.9.1",
+    "@testim/screenplay": "^0.9.3",
     "@types/puppeteer": "^3.0.0",
     "puppeteer": "^4.0.0",
     "ts-node": "^8.10.2",
