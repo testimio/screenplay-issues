@@ -1,0 +1,18 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "Screenplay integration example",
+  "scripts": {
+    "run-example": "node example.js",
+    "run-example-typescript": "ts-node example-ts.ts",
+    "test": "npm run run-example && npm run run-example-typescript"
+  },
+  "private": true,
+  "devDependencies": {
+    "@testim/screenplay": "0.0.1-canary-publish-afdb554f896652129281f919ea4ba4bb56a6c1a3",
+    "@types/puppeteer": "^3.0.0",
+    "puppeteer": "^4.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}

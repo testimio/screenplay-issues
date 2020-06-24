@@ -14,6 +14,7 @@ jobs:
         timeoutMinutes: [ 5 ]
         node: [ 10 ]
         folder: [
+          'launch-api',
           'jest',
           'mocha',
           'simple'
