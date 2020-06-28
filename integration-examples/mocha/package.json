@@ -7,7 +7,7 @@
   },
   "keywords": [],
   "devDependencies": {
-    "@testim/screenplay": "^0.9.3",
+    "@testim/screenplay": "^0.10.1",
     "mocha": "^8.0.1",
     "puppeteer": "^4.0.0"
   }
