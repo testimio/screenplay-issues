@@ -16,8 +16,7 @@ jobs:
         folder: [
           'launch-api',
           'jest',
-          'mocha',
-          'simple'
+          'mocha'
         ]
 
     name: Example ${{ matrix.folder }} on node ${{ matrix.node }}
