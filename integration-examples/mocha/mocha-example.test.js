@@ -58,7 +58,7 @@ describe("screenplay mocha example", () => {
         await page.click('#lbalblabal');
     }).timeout(10000);
 
-    it('Yet Another test 4 pass!!!', async () => {
+    it('Yet Another test 4 pass', async () => {
         await page.goto("https://wikipedia.org");
     }).timeout(10000);
 });
