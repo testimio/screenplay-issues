@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import * as screenplay from '@testim/screenplay';
 
-screenplay.launch({ testName: __filename }, async function(page) {
+screenplay.launch({ testName: __filename, browserOptions: {} }, async function(page) {
     await page.setViewport({
         width: 1400,
         height: 800,
