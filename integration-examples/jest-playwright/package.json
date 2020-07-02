@@ -1,0 +1,17 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@testim/screenplay": "0.0.1-canary-publish-29f2b7cf5097100ec9493f3cafcdcaee76ccbd50",
+    "jest": "^26.0.1",
+    "jest-playwright-preset": "^1.2.1",
+    "playwright": "^1.1.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": []
+}

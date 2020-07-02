@@ -1,7 +1,7 @@
-import puppeteer from 'puppeteer';
-import * as screenplay from '@testim/screenplay';
+// @ts-check
+const screenplay = require('@testim/screenplay');
 
-screenplay.launch({ testName: __filename, browserOptions: {} }, async function(page) {
+screenplay.launch({ testName: __filename, automationLibrary: "puppeteer" }, async function(page) {
     await page.setViewport({
         width: 1400,
         height: 800,
@@ -28,14 +28,14 @@ screenplay.launch({ testName: __filename, browserOptions: {} }, async function(p
     await page.type("[type='email']", 'me@universe.com');
 });
 
-async function sendSpecialCharacter(page: puppeteer.Page, selector: string, key: string) {
+async function sendSpecialCharacter(page, selector, key) {
     const elementHandle = await page.$(selector);
-    await elementHandle!.press(key);
-  }
+    await elementHandle.press(key);
+}
 
-  async function scrollToElement(page: puppeteer.Page, selector: string) {
+async function scrollToElement(page, selector) {
     await page.evaluate((selector) => {
-      const element = document.querySelector(selector);
-      element.scrollIntoView({ block: "center", inline: "nearest", behavior: "instant" });
+        const element = document.querySelector(selector);
+        element.scrollIntoView({ block: "center", inline: "nearest", behavior: "instant" });
     }, selector);
-  }
+}

@@ -1,10 +1,10 @@
-const screenplay = require('@testim/screenplay');
+import playwright from 'playwright';
+import * as screenplay from '@testim/screenplay';
 
-screenplay.launch({ testName: __filename }, async function(page) {
-    await page.setViewport({
+screenplay.launch({ testName: __filename, automationLibrary: 'playwright' }, async function(page) {
+    await page.setViewportSize({
         width: 1400,
-        height: 800,
-        deviceScaleFactor: 2,
+        height: 800
     });
 
     await page.goto("https://demo.testim.io/");
@@ -27,14 +27,14 @@ screenplay.launch({ testName: __filename }, async function(page) {
     await page.type("[type='email']", 'me@universe.com');
 });
 
-async function sendSpecialCharacter(page, selector, key) {
+async function sendSpecialCharacter(page: playwright.Page, selector: string, key: string) {
     const elementHandle = await page.$(selector);
-    await elementHandle.press(key);
-}
+    await elementHandle!.press(key);
+  }
 
-async function scrollToElement(page, selector) {
+  async function scrollToElement(page: playwright.Page, selector: string) {
     await page.evaluate((selector) => {
-        const element = document.querySelector(selector);
-        element.scrollIntoView({ block: "center", inline: "nearest", behavior: "instant" });
+      const element = document.querySelector(selector);
+      element!.scrollIntoView({ block: "center", inline: "nearest", behavior: "auto" });
     }, selector);
-}
+  }
