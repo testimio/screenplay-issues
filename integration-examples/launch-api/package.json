@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Screenplay integration example",
   "scripts": {
-    "example": "node example.js",
+    "example-puppeteer": "node puppeteer-example.js",
     "example-typescript": "ts-node example-ts.ts",
     "example-playwright": "ts-node playwright-example-ts.ts",
     "test": "npm run run-example && npm run run-example-typescript"
